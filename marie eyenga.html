@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SEO ============ -->
+<title>Marie Eyenga | Graphic Designer, Community Manager & Content Creator au Cameroun</title>
+<meta name="description" content="Marie Eyenga (GEMA), graphiste et community manager basée au Cameroun. Branding, design graphique, création de contenu et direction artistique pour révéler le potentiel visuel des marques.">
+<meta name="keywords" content="graphiste Cameroun, community manager Cameroun, content creator, branding Cameroun, design graphique, création de logo, identité visuelle, Marie Eyenga, GEMA, direction artistique, communication visuelle, freelance Cameroun">
+<meta name="author" content="Marie Eyenga">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ff3d00">
+<link rel="canonical" href="https://marieeyenga.com/">
+
+<meta property="og:title" content="Marie Eyenga | Graphic Designer & Content Creator">
+<meta property="og:description" content="Révéler le potentiel visuel des marques et des personnes.">
+<meta property="og:image" content="images/logo.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Marie Eyenga | Graphic Designer & Content Creator">
+<meta name="twitter:description" content="Révéler le potentiel visuel des marques et des personnes.">
+
+<link rel="icon" type="image/png" href="images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Marie Eyenga",
+  "alternateName": "GEMA",
+  "jobTitle": "Graphic Designer, Community Manager & Content Creator",
+  "email": "gemabsn03@gmail.com",
+  "address": { "@type": "PostalAddress", "addressCountry": "Cameroun" },
+  "description": "Créative pluridisciplinaire spécialisée en branding, design graphique et création de contenu.",
+  "knowsAbout": ["Branding", "Design Graphique", "Community Management", "Création de Contenu", "Direction Artistique"]
+}
+</script>
+
+<style>
+/* ================= RESET ================= */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --fire-1: #ffb700;
+  --fire-2: #ff7b00;
+  --fire-3: #ff3d00;
+  --fire-4: #c81d25;
+  --fire-5: #7a0a12;
+  --dark: #0a0a0a;
+  --dark-2: #141414;
+  --text: #e8e8e8;
+  --text-muted: #9a9a9a;
+  --gradient-fire: linear-gradient(135deg, #ffb700 0%, #ff7b00 35%, #ff3d00 65%, #c81d25 100%);
+  --gradient-fire-2: linear-gradient(90deg, #ffb700, #ff3d00, #c81d25);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+body.no-scroll { overflow: hidden; }
+
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+button { font-family: inherit; }
+
+.container { max-width: 1200px; margin: auto; padding: 0 2rem; }
+
+.gradient-text {
+  background: var(--gradient-fire-2);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: gradientFlow 4s ease infinite;
+}
+@keyframes gradientFlow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* ================= PRELOADER ================= */
+.preloader {
+  position: fixed; inset: 0;
+  background: var(--dark);
+  z-index: 10000;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.8s ease, visibility 0.8s;
+}
+.preloader.hidden { opacity: 0; visibility: hidden; }
+.preloader-logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 8px;
+  background: var(--gradient-fire-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: preloaderPulse 1.5s ease-in-out infinite;
+}
+@keyframes preloaderPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.95); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+/* ================= BARRE DE PROGRESSION ================= */
+.scroll-progress {
+  position: fixed; top: 0; left: 0;
+  height: 3px; width: 0%;
+  background: var(--gradient-fire-2);
+  z-index: 9999;
+  box-shadow: 0 0 12px rgba(255, 61, 0, 0.6);
+  transition: width 0.1s linear;
+}
+
+/* ================= CURSEUR ================= */
+.cursor, .cursor-follower {
+  position: fixed; top: 0; left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background 0.3s, border-color 0.3s;
+  mix-blend-mode: difference;
+}
+.cursor { width: 8px; height: 8px; background: #ff3d00; }
+.cursor-follower { width: 40px; height: 40px; border: 2px solid #ff7b00; }
+.cursor-follower.hover {
+  width: 80px; height: 80px;
+  background: rgba(255, 61, 0, 0.25);
+  border-color: #ffb700;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed; top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  padding: 1.2rem 0;
+  transition: all 0.4s ease;
+}
+header.scrolled {
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 123, 0, 0.2);
+}
+nav {
+  max-width: 1300px; margin: auto;
+  padding: 0 2rem;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo img { height: 55px; width: auto; transition: transform 0.3s; }
+.logo:hover img { transform: scale(1.08) rotate(-2deg); }
+
+nav ul { display: flex; gap: 2.5rem; }
+nav a {
+  font-weight: 500; font-size: 0.95rem;
+  position: relative;
+  transition: color 0.3s;
+}
+nav a::after {
+  content: ''; position: absolute;
+  bottom: -6px; left: 0;
+  width: 0; height: 2px;
+  background: var(--gradient-fire-2);
+  transition: width 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+}
+nav a:hover, nav a.active { color: var(--fire-1); }
+nav a:hover::after, nav a.active::after { width: 100%; }
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 100vh;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+  padding: 8rem 2rem 4rem;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255, 123, 0, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(200, 29, 37, 0.3), transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(255, 183, 0, 0.08), transparent 60%),
+    var(--dark);
+  animation: bgPulse 8s ease-in-out infinite;
+  z-index: 0;
+}
+@keyframes bgPulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.85; }
+}
+
+/* Particules */
+.particles { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--fire-1);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--fire-3);
+  opacity: 0;
+  animation: floatParticle linear infinite;
+}
+@keyframes floatParticle {
+  0% { opacity: 0; transform: translateY(100vh) scale(0); }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-100px) scale(1.5); }
+}
+
+.hero-content { position: relative; z-index: 2; max-width: 900px; }
+
+.tagline {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--fire-1);
+  padding: 0.5rem 1.2rem;
+  border: 1px solid rgba(255, 183, 0, 0.3);
+  border-radius: 50px;
+  margin-bottom: 2rem;
+  background: rgba(255, 183, 0, 0.05);
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255, 183, 0, 0.3); }
+  50% { box-shadow: 0 0 0 15px rgba(255, 183, 0, 0); }
+}
+
+.hero h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 1.5rem;
+}
+
+/* Animation lettre par lettre */
+.letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px) rotate(15deg);
+  animation: letterIn 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+@keyframes letterIn {
+  to { opacity: 1; transform: translateY(0) rotate(0); }
+}
+
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+.subtitle .dot { color: var(--fire-3); margin: 0 0.5rem; }
+
+.accroche {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto; margin-right: auto;
+}
+
+.hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+/* ================= BOUTONS ================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+  border: none;
+}
+.btn-primary {
+  background: var(--gradient-fire-2);
+  background-size: 200% 200%;
+  color: white;
+  box-shadow: 0 8px 30px rgba(255, 61, 0, 0.35);
+  animation: gradientShift 4s ease infinite;
+}
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 0; height: 0;
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+.btn-primary:hover::before { width: 400px; height: 400px; }
+.btn-primary:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 15px 45px rgba(255, 61, 0, 0.6);
+}
+.btn-ghost {
+  border: 2px solid rgba(255, 123, 0, 0.5);
+  color: var(--text);
+  background: transparent;
+}
+.btn-ghost:hover {
+  border-color: var(--fire-1);
+  background: rgba(255, 123, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+/* ================= SCROLL INDICATOR ================= */
+.scroll-indicator {
+  position: absolute; bottom: 2rem; left: 50%;
+  transform: translateX(-50%);
+  width: 26px; height: 42px;
+  border: 2px solid rgba(255, 123, 0, 0.5);
+  border-radius: 20px;
+  z-index: 2;
+}
+.scroll-indicator span {
+  position: absolute; top: 8px; left: 50%;
+  transform: translateX(-50%);
+  width: 4px; height: 8px;
+  background: var(--fire-2);
+  border-radius: 2px;
+  animation: scrollDown 1.8s infinite;
+}
+@keyframes scrollDown {
+  0% { opacity: 1; top: 8px; }
+  100% { opacity: 0; top: 24px; }
+}
+
+/* ================= SECTIONS + TRANSITIONS ================= */
+section {
+  padding: 7rem 0;
+  position: relative;
+  /* Transition rideau au changement de section */
+  transition: filter 0.6s ease;
+}
+
+/* Séparateur animé en haut de chaque section */
+section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 200px; height: 2px;
+  background: var(--gradient-fire-2);
+  transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+  box-shadow: 0 0 20px rgba(255, 61, 0, 0.8);
+}
+section.in-view::before {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* Effet "snap" lors de l'arrivée sur une section */
+section.snapping {
+  animation: sectionSnap 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes sectionSnap {
+  0% { transform: scale(0.98); filter: brightness(1.4); }
+  50% { transform: scale(1.005); }
+  100% { transform: scale(1); filter: brightness(1); }
+}
+
+.section-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--fire-2);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 30px; height: 2px;
+  background: var(--gradient-fire-2);
+  vertical-align: middle;
+  margin-right: 0.8rem;
+}
+
+h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -1px;
+}
+
+.section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
+.section-header p { color: var(--text-muted); font-size: 1.1rem; }
+
+/* ================= À PROPOS ================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: center;
+}
+.photo-frame {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  background: var(--dark-2);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.photo-frame:hover img { transform: scale(1.06); }
+.photo-glow {
+  position: absolute; inset: -2px;
+  background: var(--gradient-fire);
+  border-radius: 24px;
+  z-index: -1;
+  filter: blur(30px);
+  opacity: 0.6;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.9; }
+}
+
+.about-text p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.about-text strong { color: var(--fire-1); font-weight: 600; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+.stat {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px solid rgba(255, 123, 0, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 123, 0, 0.03);
+  transition: all 0.4s;
+}
+.stat:hover {
+  border-color: var(--fire-2);
+  transform: translateY(-5px) scale(1.03);
+  background: rgba(255, 123, 0, 0.08);
+  box-shadow: 0 15px 30px rgba(255, 61, 0, 0.2);
+}
+.stat-number, .stat > span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: var(--gradient-fire-2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.stat p { font-size: 0.85rem; color: var(--text-muted); margin-top: 0.3rem; }
+
+/* ================= SERVICES ================= */
+.services { background: linear-gradient(180deg, var(--dark) 0%, var(--dark-2) 100%); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+.service-card {
+  position: relative;
+  padding: 3rem 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 123, 0, 0.15);
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+.service-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: var(--gradient-fire);
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: -1;
+}
+.service-card:hover {
+  border-color: transparent;
+  box-shadow: 0 25px 60px rgba(255, 61, 0, 0.4);
+}
+.service-card:hover::before { opacity: 0.12; }
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+.service-card:hover .service-icon { transform: scale(1.2) rotate(-8deg); }
+
+.service-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.service-card p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 0.95rem; }
+.service-card ul li {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding: 0.3rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  transition: color 0.3s;
+}
+.service-card ul li::before {
+  content: '→';
+  position: absolute; left: 0;
+  color: var(--fire-2);
+  transition: transform 0.3s;
+}
+.service-card:hover ul li { color: var(--text); }
+.service-card:hover ul li::before { transform: translateX(4px); }
+
+/* ================= CTA ================= */
+.cta-banner {
+  background: linear-gradient(135deg, rgba(255, 61, 0, 0.15), rgba(200, 29, 37, 0.15));
+  border-top: 1px solid rgba(255, 123, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 123, 0, 0.2);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.cta-banner::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 183, 0, 0.15), transparent 40%);
+  pointer-events: none;
+  transition: background 0.3s;
+}
+.cta-banner p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem; }
+
+/* ================= CONTACT ================= */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 5rem;
+  align-items: start;
+}
+.contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
+
+.contact-list { margin-bottom: 2rem; }
+.contact-list li {
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  display: flex; align-items: center; gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: padding-left 0.3s, color 0.3s;
+  cursor: none;
+}
+.contact-list li:hover { padding-left: 0.5rem; color: var(--fire-1); }
+.contact-list li span { font-size: 1.3rem; }
+
+/* Bloc email direct */
+.email-direct {
+  display: block;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(255, 123, 0, 0.12), rgba(200, 29, 37, 0.12));
+  border: 1px solid rgba(255, 123, 0, 0.3);
+  margin-bottom: 2rem;
+  transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+.email-direct::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 183, 0, 0.25), transparent);
+  transition: left 0.8s;
+}
+.email-direct:hover::before { left: 100%; }
+.email-direct:hover {
+  transform: translateY(-5px);
+  border-color: var(--fire-1);
+  box-shadow: 0 15px 40px rgba(255, 61, 0, 0.35);
+}
+.email-direct-label {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fire-1);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+.email-direct-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  display: flex; align-items: center; gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.email-direct-value .copy-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.socials { display: flex; gap: 1rem; flex-wrap: wrap; }
+.socials a {
+  width: 50px; height: 50px;
+  display: flex; align-items: center; justify-content: center;
+  border: 1px solid rgba(255, 123, 0, 0.3);
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.4s;
+}
+.socials a:hover {
+  background: var(--gradient-fire-2);
+  border-color: transparent;
+  transform: translateY(-5px) rotate(8deg);
+  box-shadow: 0 10px 25px rgba(255, 61, 0, 0.5);
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.contact-form input,
+.contact-form textarea {
+  padding: 1.1rem 1.3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 123, 0, 0.2);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s;
+  cursor: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--fire-2);
+  background: rgba(255, 123, 0, 0.05);
+  box-shadow: 0 0 0 4px rgba(255, 123, 0, 0.1);
+  transform: translateY(-2px);
+}
+.contact-form textarea { min-height: 160px; resize: vertical; }
+.contact-form button { cursor: none; }
+
+/* ================= FOOTER ================= */
+footer {
+  background: #050505;
+  padding: 3rem 0 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(255, 123, 0, 0.15);
+}
+.footer-logo { height: 60px; margin: 0 auto 1.5rem; opacity: 0.9; transition: opacity 0.3s; }
+.footer-logo:hover { opacity: 1; }
+footer p { color: var(--text-muted); font-size: 0.9rem; }
+.footer-tagline {
+  margin-top: 0.5rem;
+  font-size: 0.8rem !important;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--fire-3) !important;
+}
+
+/* ================= TOAST (notification) ================= */
+.toast {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  padding: 1rem 1.5rem;
+  background: var(--gradient-fire-2);
+  color: white;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 15px 40px rgba(255, 61, 0, 0.5);
+  transform: translateY(150%);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10001;
+}
+.toast.show { transform: translateY(0); }
+
+/* ================= REVEAL ================= */
+.reveal, .reveal-left, .reveal-right {
+  opacity: 0;
+  transition: opacity 1s cubic-bezier(0.65, 0, 0.35, 1),
+              transform 1s cubic-bezier(0.65, 0, 0.35, 1);
+}
+.reveal { transform: translateY(60px); }
+.reveal-left { transform: translateX(-70px); }
+.reveal-right { transform: translateX(70px); }
+.reveal.active, .reveal-left.active, .reveal-right.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  section { padding: 5rem 0; }
+}
+@media (max-width: 700px) {
+  body { cursor: auto; }
+  .cursor, .cursor-follower { display: none; }
+  nav ul { gap: 1.2rem; font-size: 0.85rem; }
+  .logo img { height: 40px; }
+  .hero h1 { letter-spacing: -1px; }
+  .hero-buttons { flex-direction: column; width: 100%; }
+  .btn { width: 100%; }
+  .stats { grid-template-columns: 1fr; }
+  .toast { left: 1rem; right: 1rem; bottom: 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader-logo">GEMA</div>
+</div>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ CURSEUR ============ -->
+<div class="cursor"></div>
+<div class="cursor-follower"></div>
+
+<!-- ============ HEADER ============ -->
+<header id="header">
+  <nav>
+    <a href="#accueil" class="logo">
+      <img src="images/logo.png" alt="Logo GEMA - Marie Eyenga">
+    </a>
+    <ul>
+      <li><a href="#accueil">Accueil</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="accueil">
+  <div class="hero-bg"></div>
+  <div class="particles" id="particles"></div>
+  <div class="hero-content">
+    <span class="tagline reveal"> Créative pluridisciplinaire — Cameroun</span>
+    <h1 id="heroTitle">Marie <span class="gradient-tex"> Eyenga </span></h1>
+    <h2 class="subtitle reveal">
+      Graphic Designer <span class="dot">•</span> Community Manager <span class="dot">&</span> Content Creator
+    </h2>
+    <p class="accroche reveal">« Révéler le potentiel visuel des marques et des personnes. »</p>
+    <div class="hero-buttons reveal">
+      <a href="mailto:gemabsn03@gmail.com" class="btn btn-primary"> M'écrire un email</a>
+      <a href="#services" class="btn btn-ghost">Voir mes services</a>
+    </div>
+  </div>
+  <div class="scroll-indicator"><span></span></div>
+</section>
+
+<!-- ============ À PROPOS ============ -->
+<section class="about" id="apropos">
+  <div class="container about-grid">
+    <div class="about-image reveal-left">
+      <div class="photo-frame tilt">
+        <img src="images/marie.jfif" alt="Marie Eyenga - Graphiste et Community Manager au Cameroun">
+        <div class="photo-glow"></div>
+      </div>
+    </div>
+    <div class="about-text reveal-right">
+      <span class="section-tag">À propos</span>
+      <h2>Créative <span class="gradient-text">pluridisciplinaire</span></h2>
+      <p>
+        Je suis <strong>Marie Eyenga</strong>, créative pluridisciplinaire basée au Cameroun.
+        Convaincue que l'image est le premier levier de crédibilité, j'accompagne les
+        professionnels et les particuliers dans leur communication visuelle et leur style personnel.
+      </p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-number" data-target="50">0</span><span>+</span>
+          <p>Projets réalisés</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="30">0</span><span>+</span>
+          <p>Clients satisfaits</p>
+        </div>
+        <div class="stat">
+          <span class="stat-number" data-target="3">0</span><span>+</span>
+          <p>Années d'expérience</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Mes services</span>
+      <h2>Ce que je <span class="gradient-text">crée</span> pour vous</h2>
+      <p>Des solutions visuelles complètes pour booster votre image de marque.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal tilt">
+        <div class="service-icon">01</div>
+        <h3>Branding & Design Graphique</h3>
+        <p>Logos, identités visuelles, visuels et supports de communication sur-mesure pour marquer les esprits.</p>
+        <ul>
+          <li>Création de flyers et d'affiches publicitaires.</li>
+          <li>Création de chartes graphiques.</li>
+          <li>Supports print & digital</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal tilt">
+        <div class="service-icon">02</div>
+        <h3>Community Management</h3>
+        <p>Stratégie de contenu, animation de communautés et gestion de vos réseaux sociaux avec impact.</p>
+        <ul>
+          <li>Élaboration d'une stratégie de communication digitale.</li>
+          <li>Gestion des comptes Instagram, Facebook, TikTok ou LinkedIn.</li>
+          <li>Analyse des statistiques et des performances.</li>
+        </ul>
+      </div>
+
+      <div class="service-card reveal tilt">
+        <div class="service-icon">03</div>
+        <h3>Création de Contenu</h3>
+        <p>Conception visuelle et direction artistique pour des contenus qui racontent votre histoire.</p>
+        <ul>
+          <li>Vidéos promotionnelles pour les entreprises.</li>
+          <li>Storytelling pour valoriser une marque.</li>
+          <li>Écriture de scripts pour les vidéos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-banner">
+  <div class="container reveal">
+    <h2>Prêt à <span class="gradient-text">révéler</span> votre image ?</h2>
+    <p>Discutons de votre projet et donnons vie à vos idées.</p>
+    <a href="mailto:gemabsn03@gmail.com?subject=Demande%20de%20projet&body=Bonjour%20Marie%2C%0A%0AJe%20souhaite%20discuter%20d'un%20projet.%0A%0A" class="btn btn-primary">Démarrer un projet par email</a>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="contact-info reveal-left">
+      <span class="section-tag">Contact</span>
+      <h2>Travaillons <span class="gradient-text">ensemble</span></h2>
+      <p>Une idée, un projet, une question ? Cliquez ci-dessous pour m'écrire directement.</p>
+
+      <!-- BLOC EMAIL DIRECT -->
+      <a href="mailto:gemabsn03@gmail.com?subject=Demande%20de%20projet&body=Bonjour%20Marie%2C%0A%0AJe%20souhaite%20discuter%20d'un%20projet.%0A%0A"
+         class="email-direct"
+         id="emailBlock">
+        <div class="email-direct-label">M'écrire directement</div>
+        <div class="email-direct-value">
+          
+          <span class="copy-hint">(clic pour envoyer • maintien pour copier)</span>
+        </div>
+      </a>
+
+      <ul class="contact-list">
+        <li><span>📞</span> +237 6 41 64 19 56</li>
+        <li><span>📍</span> Douala | Cameroun</li>
+      </ul>
+
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="https://web.facebook.com/profile.php?id=61595036717934" aria-label="Facebook">FB</a>
+        <a href="www.linkedin.com/in/gema-business-525647262" aria-label="LinkedIn">IN</a>
+        <a href="https://www.behance.net/gallery/255928815/portfolio-cm" aria-label="Behance">Be</a>
+      </div>
+    </div>
+
+    <form class="contact-form reveal-right" id="contactForm">
+      <input type="text" name="name" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <input type="text" name="subject" placeholder="Sujet">
+      <textarea name="message" placeholder="Votre message..." required></textarea>
+      <button type="submit" class="btn btn-primary">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <img src="images/logo.png" alt="GEMA" class="footer-logo">
+    <p>© 2025 Marie Eyenga — GEMA. Tous droits réservés.</p>
+    <p class="footer-tagline">Graphic Designer • Community Manager • Content Creator</p>
+  </div>
+</footer>
+
+<!-- ============ TOAST ============ -->
+<div class="toast" id="toast">Message envoyé </div>
+
+<script>
+/* ============================================
+   PRELOADER
+============================================ */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').classList.add('hidden');
+    startHeroAnimations();
+  }, 800);
+});
+
+/* ============================================
+   ANIMATION LETTRE PAR LETTRE DU TITRE
+============================================ */
+function startHeroAnimations() {
+  const title = document.getElementById('heroTitle');
+  const html = title.innerHTML;
+
+  // On découpe en gardant les balises <span class="gradient-text">
+  const temp = document.createElement('div');
+  temp.innerHTML = html;
+
+  let newHTML = '';
+  temp.childNodes.forEach(node => {
+    if (node.nodeType === 3) {
+      // texte brut
+      node.textContent.split('').forEach((char, i) => {
+        if (char === ' ') {
+          newHTML += '&nbsp;';
+        } else {
+          newHTML += `<span class="letter" style="animation-delay:${(i * 0.05)}s">${char}</span>`;
+        }
+      });
+    } else if (node.nodeType === 1) {
+      // balise span (gradient-text)
+      const cls = node.className;
+      const txt = node.textContent;
+      newHTML += `<span class="${cls}">`;
+      txt.split('').forEach((char, i) => {
+        if (char === ' ') {
+          newHTML += '&nbsp;';
+        } else {
+          newHTML += `<span class="letter" style="animation-delay:${(i * 0.05 + 0.3)}s">${char}</span>`;
+        }
+      });
+      newHTML += `</span>`;
+    }
+  });
+  title.innerHTML = newHTML;
+}
+
+/* ============================================
+   HEADER SCROLL + BARRE DE PROGRESSION
+============================================ */
+const header = document.getElementById('header');
+const scrollProgress = document.getElementById('scrollProgress');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  header.classList.toggle('scrolled', y > 50);
+
+  const max = document.documentElement.scrollHeight - window.innerHeight;
+  const pct = (y / max) * 100;
+  scrollProgress.style.width = pct + '%';
+});
+
+/* ============================================
+   CURSEUR PERSONNALISÉ
+============================================ */
+const cursor = document.querySelector('.cursor');
+const follower = document.querySelector('.cursor-follower');
+let mouseX = 0, mouseY = 0, followerX = 0, followerY = 0;
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+  cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+});
+
+function animateFollower() {
+  followerX += (mouseX - followerX) * 0.15;
+  followerY += (mouseY - followerY) * 0.15;
+  follower.style.transform = `translate(${followerX}px, ${followerY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animateFollower);
+}
+animateFollower();
+
+document.querySelectorAll('a, button, .service-card, .stat, input, textarea, .email-direct').forEach(el => {
+  el.addEventListener('mouseenter', () => follower.classList.add('hover'));
+  el.addEventListener('mouseleave', () => follower.classList.remove('hover'));
+});
+
+/* ============================================
+   REVEAL AU SCROLL + SNAP DES SECTIONS
+============================================ */
+const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('active'), i * 120);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+revealElements.forEach(el => revealObserver.observe(el));
+
+/* Effet "snap" à l'arrivée sur chaque section + activation du séparateur */
+const sections = document.querySelectorAll('section');
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view', 'snapping');
+      setTimeout(() => entry.target.classList.remove('snapping'), 900);
+    }
+  });
+}, { threshold: 0.35 });
+sections.forEach(s => sectionObserver.observe(s));
+
+/* Lien actif dans la nav selon la section visible */
+const navLinks = document.querySelectorAll('nav a[href^="#"]');
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.5 });
+sections.forEach(s => navObserver.observe(s));
+
+/* ============================================
+   COMPTEURS ANIMÉS
+============================================ */
+const counters = document.querySelectorAll('.stat-number');
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = +el.dataset.target;
+      let current = 0;
+      const step = target / 50;
+      const update = () => {
+        current += step;
+        if (current < target) {
+          el.textContent = Math.ceil(current);
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target;
+        }
+      };
+      update();
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+counters.forEach(c => counterObserver.observe(c));
+
+/* ============================================
+   PARALLAX HERO
+============================================ */
+const heroBg = document.querySelector('.hero-bg');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  if (y < window.innerHeight) {
+    heroBg.style.transform = `translateY(${y * 0.3}px) scale(${1 + y * 0.0003})`;
+  }
+});
+
+/* ============================================
+   PARTICULES FLOTTANTES DANS LE HERO
+============================================ */
+const particlesContainer = document.getElementById('particles');
+function createParticles() {
+  for (let i = 0; i < 30; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (8 + Math.random() * 12) + 's';
+    p.style.animationDelay = (Math.random() * 8) + 's';
+    const size = 2 + Math.random() * 4;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.background = ['#ffb700', '#ff7b00', '#ff3d00', '#c81d25'][Math.floor(Math.random() * 4)];
+    particlesContainer.appendChild(p);
+  }
+}
+createParticles();
+
+/* ============================================
+   TILT 3D (photo + cartes services)
+============================================ */
+document.querySelectorAll('.tilt').forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const cx = rect.width / 2;
+    const cy = rect.height / 2;
+    const rotX = ((y - cy) / cy) * -8;
+    const rotY = ((x - cx) / cx) * 8;
+    el.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+  });
+  el.addEventListener('mouseleave', () => {
+    el.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+  });
+});
+
+/* ============================================
+   BOUTON MAGNÉTIQUE
+============================================ */
+document.querySelectorAll('.btn').forEach(btn => {
+  btn.addEventListener('mousemove', (e) => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x * 0.2}px, ${y * 0.3}px) translateY(-4px) scale(1.03)`;
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+  });
+});
+
+/* ============================================
+   EFFET LUMIÈRE QUI SUIT LA SOURIS (CTA)
+============================================ */
+document.querySelectorAll('.cta-banner').forEach(banner => {
+  banner.addEventListener('mousemove', (e) => {
+    const rect = banner.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    banner.style.setProperty('--mx', x + '%');
+    banner.style.setProperty('--my', y + '%');
+  });
+});
+
+/* ============================================
+   TOAST
+============================================ */
+const toast = document.getElementById('toast');
+function showToast(msg) {
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+/* ============================================
+   FORMULAIRE → OUVRE LE CLIENT MAIL
+============================================ */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const data = new FormData(this);
+  const name = data.get('name');
+  const email = data.get('email');
+  const subject = data.get('subject') || 'Nouveau message depuis le site';
+  const message = data.get('message');
+
+  const body = `Nom : ${name}%0AEmail : ${email}%0A%0A${message}`;
+  const mailto = `mailto:gemabsn03@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+
+  window.location.href = mailto;
+  showToast('Ouverture de votre client mail ✉️');
+  this.reset();
+});
+
+/* ============================================
+   CLIC LONG SUR EMAIL = COPIE
+============================================ */
+const emailBlock = document.getElementById('emailBlock');
+let pressTimer;
+
+emailBlock.addEventListener('mousedown', () => {
+  pressTimer = setTimeout(() => {
+    navigator.clipboard.writeText('gemabsn03@gmail.com').then(() => {
+      showToast('Email copié 📋');
+    });
+    emailBlock.dataset.longPressed = 'true';
+  }, 600);
+});
+
+emailBlock.addEventListener('mouseup', (e) => {
+  clearTimeout(pressTimer);
+  if (emailBlock.dataset.longPressed === 'true') {
+    e.preventDefault();
+    emailBlock.dataset.longPressed = 'false';
+  }
+});
+
+emailBlock.addEventListener('mouseleave', () => {
+  clearTimeout(pressTimer);
+  emailBlock.dataset.longPressed = 'false';
+});
+
+/* ============================================
+   SMOOTH SCROLL (avec offset header)
+============================================ */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      const offset = 70;
+      const top = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+</script>
+</body>
+</html>
